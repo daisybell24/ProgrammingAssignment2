@@ -1,5 +1,5 @@
 ## Two functions to create a special object that stores
-## a matrix and cache's its mean.
+## a matrix and caches its inverse.
 
 ## Creates list of functions to set the value of the matrix,
 ## get the value of the matrix, set the value of the inverse
@@ -20,8 +20,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Function to calculate the inverse of the special matrix
-## returned by makeCacheMatrix
+## Calculates the inverse of the special matrix returned
+## by makeCacheMatrix, or retrieves it from the cache if 
+## already computed
 
 cacheSolve <- function(x, ...) {
         i <- x$getinv()
